@@ -25,7 +25,12 @@ h1 {
 }
 
 .fizzbuzz-result {
-  margin-bottom: 6px;
+  margin:   10px;
+  padding:  5px;
+}
+
+.odd {
+  background-color: #555;
 }
 
 #headline {
