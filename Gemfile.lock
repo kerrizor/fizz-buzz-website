@@ -58,6 +58,7 @@ GEM
     mime-types (1.17.2)
     minitest (2.8.1)
     multi_json (1.0.3)
+    pg (0.11.0)
     polyglot (0.3.3)
     rack (1.3.5)
     rack-cache (1.0.3)
@@ -117,6 +118,7 @@ DEPENDENCIES
   fizz-buzz
   jquery-rails
   minitest
+  pg
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   sqlite3
