@@ -3,5 +3,47 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
+
+body {
+  background: #2a2a38;
+  font:       12pt Arial;
+  color:      #cccccc;
+}
+
+a {
+  color:        #9a7f49;
+  font-weight:  normal;
+}
+
+h1 {
+  font-weight:      bold;
+  text-decoration:  none;
+  color:            #cccccc;
+  font-size:        15pt;
+}
+
+.fizzbuzz-result {
+  margin-bottom: 6px;
+}
+
+#headline {
+  text-align:       center;
+  margin:           auto;
+  font-weight:      bold;
+  text-decoration:  none;
+  color:            #cccccc;
+  font-size:        36pt;
+  margin-top:       20px;
+}
+
+.fox-box {
+  width:          400px;
+  margin:         auto;
+  margin-top:     20px;
+  margin-bottom:  100px;
+  background:     #000000;
+  border:         3px double #505068;
+  padding:        20px;
+}
