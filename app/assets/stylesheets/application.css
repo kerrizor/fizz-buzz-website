@@ -37,6 +37,15 @@ h1 {
   font-size:        36pt;
   margin-top:       20px;
 }
+#subheader {
+  text-align:       center;
+  margin:           auto;
+  font-weight:      bold;
+  text-decoration:  none;
+  color:            #cccccc;
+  font-size:        8pt;
+
+}
 
 .fox-box {
   width:          400px;
