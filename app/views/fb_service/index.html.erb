@@ -1,22 +1,5 @@
 <style>
 
-body {
-  background: #2a2a38;
-  font:       12pt Arial;
-  color:      #cccccc;
-}
-
-a {
-  color:        #9a7f49;
-  font-weight:  normal;
-}
-
-h1 {
-  font-weight:      bold;
-  text-decoration:  none;
-  color:            #cccccc;
-  font-size:        15pt;
-}
 
 .fizzbuzz-result {
   margin:   10px;
@@ -27,42 +10,87 @@ h1 {
   background-color: #555;
 }
 
-#headline {
-  text-align:       center;
-  margin:           auto;
-  font-weight:      bold;
-  text-decoration:  none;
-  color:            #cccccc;
-  font-size:        36pt;
-  margin-top:       20px;
-}
-#subheader {
-  text-align:       center;
-  margin:           auto;
-  font-weight:      bold;
-  text-decoration:  none;
-  color:            #cccccc;
-  font-size:        8pt;
-
-}
 
 .fox-box {
   width:          400px;
   margin:         auto;
   margin-top:     20px;
   margin-bottom:  100px;
-  background:     #000000;
   border:         3px double #505068;
   padding:        20px;
 }
 
 </style>
-<div id="headline">Fizz Buzz</div>
 
-<div id="subheader">(<%= link_to "http://github.com/kerrizor/fizz-buzz","http://github.com/kerrizor/fizz-buzz", :target => "_new_window" %>)</div>
-
-<div class="fox-box">
-  <% @fizzbuzz.crunch.each do |v| %>
-    <div class="fizzbuzz-result <%= cycle('odd', 'even') %>"><%= v %></div>
-  <% end %>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="#"><%= t('site.header') %></a>
+      <ul class="nav">
+        <!-- <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+      </ul>
+    </div>
+  </div>
 </div>
+
+<div class="container-fluid">
+  <div class="sidebar">
+    <div class="well">
+      <h5>Fizzness</h5>
+      <ul>
+        <li><a href="#">API</a> (coming soon!)</li>
+      </ul>
+      <h5>Buzzness</h5>
+      <ul>
+        <li><a href="http://github.com/kerrizor" target=github>Github</a></li>
+        <li><a href="http://twitter.com/fizzbuzz_io" target=twitter>Twitter</a></li>
+        <li><a href="mailto:kerrizor@kerrizor.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <div class="hero-unit">
+      <h1><%= t('site.greeting') %></h1>
+      <p><%= t('site.intro') %></p>
+      <blockquote>
+        <p><%= t('fizzbuzz.explanation') %></p>
+      </blockquote>
+
+      For example:
+      <ul>
+        <% @fizzbuzz.crunch(1,17).each do |v| %>
+          <li><%= v %></li>
+        <% end %>
+      </ul>
+      ...and so on.
+    </div>
+
+    <div class="row">
+      <div class="span5">
+        <h2><%= t('why.header') %></h2>
+        <p><%= t('why.body').html_safe %></p>
+        <p><a class="btn" href="http://c2.com/cgi/wiki?FizzBuzzTest">Further reading &raquo;</a></p>
+      </div>
+      <div class="span6">
+        <h2><%= t('gem.header') %></h2>
+        <p><%= t('gem.body') %></p>
+        <p><a class="btn primary" href="http://github.com/kerrizor/fizz-buzz" target=github><%= t('site.gem').html_safe %></a></p>
+     </div>
+     <div class="span5">
+       <h2><%= t('joke.header') %></h2>
+       <p><%= t('joke.body').html_safe %></p>
+       <p><a href=http://travis-ci.org/kerrizor/fizz-buzz target=travis><img src="https://secure.travis-ci.org/kerrizor/fizz-buzz.png" /></a></p>
+     </div>
+    </div>
+
+    <footer>
+      <p><%= t('site.copyright').html_safe %></p>
+    </footer>
+  </div>
+</div>
+
+<br><br>

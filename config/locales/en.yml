@@ -2,4 +2,29 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  fizzbuzz:
+    header:       'fizzbuzz.io'
+    explanation:  '"Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."'
+  site:
+    header:     'fizzbuzz.io'
+    greeting:   'Will it Fizz? Will it Buzz?'
+    intro:      'FizzBuzz is a simple promgramming challenge that has become trendy to challenge job candidates with.'
+    gem:        'Fork it on Github &raquo;'
+    copyright:  '&copy; Kerri Miller 2011'
+  what:
+    header: 'Fizz wha?'
+    body:   'FizzBuzz is a simple programming challenge that has become trendy to challenge job candidates with.  In its most common form, it appears thusly: "Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."'
+    tail:   ''
+  why:
+    header: 'Why ask candidates?'
+    body:   "Anecdotally, 8 out of 10 recent CS graduates can't write it successfully in the language of their choice.  Its a handy tool to screen out those who might have padded their resume, and perhaps to watch how a developer approaches problem solving, but far too often its merely a token."
+
+  gem:
+    header: 'Why a gem and a website?'
+    body:   'In interviews, I’m consistently asked to whiteboard (or actually code) my solution to the FizzBuzz problem, and I decided once and for all to code my definitive answer instead of endless whiteboarding. FizzBuzz is a robust solution to the problem, and fizzbuzz.io offers a simple, effective API to solve the FizzBuzz problem in a modern fashion.'
+  joke:
+    header: 'So its a joke?'
+    body:   'Not at all! I treated this project with the utmost sincerity and seriousness. Its not perfect, but its an example of <a href=http://codeascraft.etsy.com/about/ target=etsy>code as craft</a>, TDD, API development, and has been a delightful kata, writing and rewriting a basic, solved problem from new angles.'
+  details:
+    header: "What's inside?"
+    body:   "<ul><li>TDD</li><li><a href=http://travis-ci.org/#!/kerrizor/fizz-buzz target=travis>tested</a> on Ruby 1.8.7, 1.9.2, 1.9.3, and jRuby</li>"
