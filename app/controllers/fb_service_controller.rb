@@ -1,6 +1,6 @@
-class FbServiceController < ApplicationController
-  attr_reader :fbres
+require 'FizzBuzzModel'
 
+class FbServiceController < ApplicationController
   def index
     @fizzbuzz = FizzBuzz.new
 
@@ -12,24 +12,11 @@ class FbServiceController < ApplicationController
     end
   end
 
-  class FizzBuzzResult
-    attr_reader :id
-    attr_reader :result
-
-    def initialize(id, result)
-      @id = id
-      @result = result
-    end
-  end
-
   def fizzbuzz
     if params[:id].to_i > 0
       n = params[:id].to_i
 
-      result = {}
-      result["result-" + n.to_s] = n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n
-
-      @fbres = FizzBuzzResult.new(params[:id], n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n)
+      @fbres = FizzBuzzModel.new(n)
 
       respond_to do |format|
         format.json
