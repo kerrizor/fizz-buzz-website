@@ -1,4 +1,6 @@
 class FbServiceController < ApplicationController
+  attr_reader :fbres
+
   def index
     @fizzbuzz = FizzBuzz.new
 
@@ -10,6 +12,16 @@ class FbServiceController < ApplicationController
     end
   end
 
+  class FizzBuzzResult
+    attr_reader :id
+    attr_reader :result
+
+    def initialize(id, result)
+      @id = id
+      @result = result
+    end
+  end
+
   def fizzbuzz
     if params[:id].to_i > 0
       n = params[:id].to_i
@@ -17,13 +29,11 @@ class FbServiceController < ApplicationController
       result = {}
       result["result-" + n.to_s] = n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n
 
+      @fbres = FizzBuzzResult.new(params[:id], n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n)
+
       respond_to do |format|
-        format.json do
-          render(:json => result.to_json, :status => :ok)
-        end
-	format.xml do
-	  render(:xml => result.to_xml(:root => "fizzbuzz"), :status => :ok)
-	end
+        format.json
+	format.xml
       end
     else
       respond_to do |format|
