@@ -15,18 +15,24 @@ class FbServiceController < ApplicationController
       n = params[:id].to_i
 
       result = {}
-      result[n] = n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n
+      result["result-" + n.to_s] = n.fizzbuzz? ? "FizzBuzz" : n.buzz? ? "Buzz" : n.fizz? ? "Fizz" : n
 
       respond_to do |format|
         format.json do
           render(:json => result.to_json, :status => :ok)
         end
+	format.xml do
+	  render(:xml => result.to_xml(:root => "fizzbuzz"), :status => :ok)
+	end
       end
     else
       respond_to do |format|
         format.json do
           render(:json => params[:id],:status => :error)
         end
+	format.xml do
+	  render(:xml => params[:id], :status => :error)
+	end
       end
     end
   end
