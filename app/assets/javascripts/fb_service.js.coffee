@@ -12,7 +12,7 @@ getobj = (n) ->
 
 randomfizzbuzz = () -> 
   getobj(Math.floor 1+Math.random()*100);
-  setTimeout randomfizzbuzz, 3000;
+  setTimeout randomfizzbuzz, 5000;
 
 $ -> 
-  setTimeout randomfizzbuzz, 3000;
+  setTimeout randomfizzbuzz, 5000;
