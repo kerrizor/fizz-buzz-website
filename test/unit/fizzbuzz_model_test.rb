@@ -1,5 +1,5 @@
 require "test/unit"
-require File.expand_path('../../../app/models/FizzBuzzModel.rb', __FILE__)
+require_relative '../../app/models/FizzBuzzModel.rb'
 
 class FizzBuzzModelTest < Test::Unit::TestCase
    def test_simple
