@@ -33,4 +33,7 @@ class FbServiceController < ApplicationController
       end
     end
   end
+
+  def fizzbuzz_api
+  end
 end

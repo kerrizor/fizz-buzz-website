@@ -1,0 +1,35 @@
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="/"><%= t('site.header') %></a>
+      <div id="randomFizzBuzz" style="float:right; color:#ffffff; padding-top: 10px">3 is Fizz</div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="sidebar">
+    <div class="well">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="#" onclick="$('#resource-name').text('fizzbuzz'); $('#resource-path').text('/fizzbuzz/:id.:format'); $('#resource-formats').text('supports json, xml'); $('#resource-text').html('id: the number passed in<br/>result: whether it is a fizz, buzz, fizzbuzz or number.');">fizzbuzz</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <div class="hero-unit">
+      <h2 id="resource-name">Select A Resource</h2>
+      <p id="resource-path"></p>
+      <p id="resource-formats"></p>
+      <p id="resource-text"></p>
+    </div>
+
+    <footer>
+      <p><%= t('site.copyright').html_safe %></p>
+    </footer>
+  </div>
+</div>
+
+<br><br>
