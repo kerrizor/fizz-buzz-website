@@ -11,14 +11,16 @@ class FbServiceControllerTest < ActionController::TestCase
     get(:fizzbuzz, :id => 3, :format => :json)
 
     assert_response :success
-    assert_equal "Fizz", json['3']
+    assert_not_nil assigns(:fbres)
+    assert_equal "Fizz", assigns["fbres"].result
    end
 
    test "that 5 is buzz" do
     get(:fizzbuzz, :id => 5, :format => :json)
 
     assert_response :success
-    assert_equal "Buzz", json['5']
+    assert_not_nil assigns(:fbres)
+    assert_equal "Buzz", assigns["fbres"].result
    end
 
 
@@ -26,20 +28,35 @@ class FbServiceControllerTest < ActionController::TestCase
     get(:fizzbuzz, :id => 15, :format => :json)
 
     assert_response :success
-    assert_equal "FizzBuzz", json['15']
+    assert_not_nil assigns(:fbres)
+    assert_equal "FizzBuzz", assigns["fbres"].result
    end
 
    test "that 4 is a number" do
      get(:fizzbuzz, :id => 4, :format => :json)
 
      assert_response :success
-     assert_equal 4, json['4']
+    assert_not_nil assigns(:fbres)
+    assert_equal 4, assigns["fbres"].result
     end
 
     test "that junk returns an error" do
       get(:fizzbuzz, :id => "foo", :format => :json)
 
       assert_response :error
-     end
+    end
 
+    test "that xml is a valid format" do
+      get(:fizzbuzz, :id => "15", :format => :xml)
+
+      assert_response :success
+      assert_not_nil assigns(:fbres)
+      assert_equal "FizzBuzz", assigns["fbres"].result
+    end
+
+    test "that xml with invalid input" do
+      get(:fizzbuzz, :id => "qrz", :format => :xml)
+
+      assert_response :error
+    end
 end

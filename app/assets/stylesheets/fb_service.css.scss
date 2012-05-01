@@ -1,3 +1,20 @@
 // Place all the styles related to the fb-service controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.fizzbuzz-result {
+  margin:   10px;
+  padding:  5px;
+}
+
+.odd {
+  background-color: #555;
+}
+
+.fox-box {
+  width:          400px;
+  margin:         auto;
+  margin-top:     20px;
+  margin-bottom:  100px;
+  border:         3px double #505068;
+  padding:        20px;
+}
