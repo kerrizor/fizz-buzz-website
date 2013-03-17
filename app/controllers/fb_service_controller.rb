@@ -27,7 +27,6 @@ class FbServiceController < ApplicationController
         format.json do
           render(:json => params[:id],:status => :error)
         end
-
         format.xml do
           render(:xml => params[:id], :status => :error)
         end
