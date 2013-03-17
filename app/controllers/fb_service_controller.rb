@@ -20,16 +20,17 @@ class FbServiceController < ApplicationController
 
       respond_to do |format|
         format.json
-	format.xml
+        format.xml
       end
     else
       respond_to do |format|
         format.json do
           render(:json => params[:id],:status => :error)
         end
-	format.xml do
-	  render(:xml => params[:id], :status => :error)
-	end
+
+        format.xml do
+          render(:xml => params[:id], :status => :error)
+        end
       end
     end
   end
