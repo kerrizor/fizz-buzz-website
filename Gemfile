@@ -16,7 +16,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'fizz-buzz'
+gem 'fizz-buzz', '0.4.0'
 
 group :test do
   # Pretty printed test output
