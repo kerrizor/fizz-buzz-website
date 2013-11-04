@@ -8,7 +8,7 @@ en:
   site:
     header:     'fizzbuzz.io'
     greeting:   'Will it Fizz? Will it Buzz?'
-    intro:      'FizzBuzz is a simple promgramming challenge that has become trendy to challenge job candidates with.'
+    intro:      'FizzBuzz is a simple programming challenge that has become trendy to challenge job candidates with.'
     gem:        'Fork it on Github &raquo;'
     copyright:  '&copy; Kerri Miller 2013'
   what:
